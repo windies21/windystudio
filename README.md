@@ -5,6 +5,7 @@ winDy and 21st Century Radio Band
  * Member
    - winDy: Vocal, Guitar
    - 영근: Vocal, Percussion
+   
  * Guest
    - 병윤: Bass
    - 준식: Vocal, Guitar, Bass
