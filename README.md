@@ -2,9 +2,9 @@
 winDy and 21st Century Radio Band
 
  * winDy (=win of indie)
-   - 아이작 아시모프처럼 명쾌하게 생각하기
-   - 마셜 로젠버그처럼 대화하기
-   - 스콧 니어링처럼 죽기
+  - 아이작 아시모프처럼 명쾌하게 생각하기
+  - 마셜 로젠버그처럼 대화하기
+  - 스콧 니어링처럼 죽기
    
 # 21st Century Radio Band (21세기라디오밴드)
  * Member
