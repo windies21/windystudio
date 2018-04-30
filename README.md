@@ -1,5 +1,4 @@
 # winDy
- ![winDy](profile_1.JPG)
  * winDy = win of indie
  * 아이작 아시모프처럼 명쾌하게 생각하기
  * 마셜 로젠버그처럼 대화하기
