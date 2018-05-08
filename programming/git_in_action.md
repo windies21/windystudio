@@ -18,44 +18,42 @@ Conflict 코드 수정 후 Git add .
  git branch develop --set-upstream-to origin/develop
  ```
  
- *. Git Flow in Terminal
+ 1. Git Flow in Terminal
  ```
  brew install git-flow
  https://github.com/nvie/gitflow/wiki/Command-Line-Arguments
  ```
 
  1. 삭제된 리모트 branch tracking 중단하기
-```
-git fetch --prune && git branch -r | awk '{print $1}' | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk '{print $1}' | xargs git branch -d
-```
-
+ ```
+ git fetch --prune && git branch -r | awk '{print $1}' | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk '{print $1}' | xargs git branch -d
+ ```
+ 
  1. 원격 저장소 url 변경하기
-http://minsone.github.io/git/github-managing-remotes-changing-a-remotes-url
-
+ http://minsone.github.io/git/github-managing-remotes-changing-a-remotes-url
+ 
  1. git hub pull request
-http://dogfeet.github.io/articles/2012/how-to-github.html
+ http://dogfeet.github.io/articles/2012/how-to-github.html
 
  1. git stash
-https://blog.outsider.ne.kr/788
+ https://blog.outsider.ne.kr/788
 
  1. revert pushed merge
-```
-git revert -m 1 [merge commit]
-```
-
+ ```
+ git revert -m 1 [merge commit]
+ ```
+ 
  1. branch 를 특정 commit 으로 되돌리기
-```
-git reset --hard [commit]
-git push --force origin develop
-```
-
+ ```
+ git reset --hard [commit]
+ git push --force origin develop
+ ```
+ 
  1. git fork update
-http://minsone.github.io/git/GitHub-Syncing-a-fork
-
+ http://minsone.github.io/git/GitHub-Syncing-a-fork
+ 
  1. git diff color 설정하기
-https://git-scm.com/book/ko/v1/Git%EB%A7%9E%EC%B6%A4-Git-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0
-
-
-
-* 참고
-https://www.gitkraken.com/
+ https://git-scm.com/book/ko/v1/Git%EB%A7%9E%EC%B6%A4-Git-%EC%84%A4%EC%A0%95%ED%95%98%EA%B8%B0
+ 
+ * 참고
+ https://www.gitkraken.com/
