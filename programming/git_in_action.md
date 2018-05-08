@@ -18,7 +18,7 @@ Conflict 코드 수정 후 Git add .
  git branch develop --set-upstream-to origin/develop
  ```
  
- 1. Git Flow in Terminal
+ *. Git Flow in Terminal
  ```
  brew install git-flow
  https://github.com/nvie/gitflow/wiki/Command-Line-Arguments
