@@ -14,9 +14,9 @@ http://www.ocpsoft.org/tutorials/git/reset-and-sync-local-respository-with-remot
 Conflict 코드 수정 후 Git add . 
 
  1. Change remote git branch tracking
-```
-git branch develop --set-upstream-to origin/develop
-```
+ ```
+ git branch develop --set-upstream-to origin/develop
+ ```
  1. Git Flow in Terminal
 ```
 brew install git-flow
