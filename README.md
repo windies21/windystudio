@@ -16,7 +16,7 @@
    - [LIVE 2018년 5월 1일 (우아한 푸줏간 이태원동 118-4 / 7시 30분)](21stCenturyRadioBand/live_20180501.md)
    
 # [programming](programming/README.md)
- * language
+ * programming
  * coding tools
  * using computer
  
