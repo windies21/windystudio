@@ -34,3 +34,5 @@ bind M \
   * 변경한 conf 파일을 적용한다.
 
 $ tmux source-file ~/.tmux.conf
+
+#[locale](upload_10_10_2016_at_2_27_06_PM.png)
