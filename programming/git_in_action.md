@@ -56,7 +56,7 @@ Conflict 코드 수정 후 Git add .
  git push --force origin develop
  ```
  
- 1. git fork update
+ 15. git fork update
  http://minsone.github.io/git/GitHub-Syncing-a-fork
  
  1. git diff color 설정하기
