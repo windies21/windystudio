@@ -13,7 +13,7 @@ http://www.ocpsoft.org/tutorials/git/reset-and-sync-local-respository-with-remot
  1. Git rebase Conflict 해결시
 Conflict 코드 수정 후 Git add . 
 
- 1. Change remote git branch tracking
+1. Change remote git branch tracking
  ```
  git branch develop --set-upstream-to origin/develop
  ```
