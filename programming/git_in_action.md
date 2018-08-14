@@ -50,7 +50,7 @@ Conflict 코드 수정 후 Git add .
  git revert -m 1 [merge commit]
  ```
  
- 1. branch 를 특정 commit 으로 되돌리기
+ 14. branch 를 특정 commit 으로 되돌리기
  ```
  git reset --hard [commit]
  git push --force origin develop
