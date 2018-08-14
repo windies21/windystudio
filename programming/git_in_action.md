@@ -13,29 +13,30 @@ http://www.ocpsoft.org/tutorials/git/reset-and-sync-local-respository-with-remot
  1. Git rebase Conflict 해결시
 Conflict 코드 수정 후 Git add . 
 
-1. Change remote git branch tracking
+ 1. Change remote git branch tracking
  ```
  git branch develop --set-upstream-to origin/develop
  ``` 
-1. Git Flow in Terminal
+
+ 7. Git Flow in Terminal
  ```
  brew install git-flow
  https://github.com/nvie/gitflow/wiki/Command-Line-Arguments
  ```
 
- 1. 삭제된 리모트 branch tracking 중단하기
+ 8. 삭제된 리모트 branch tracking 중단하기
  ```
  git fetch --prune && git branch -r | awk '{print $1}' | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk '{print $1}' | xargs git branch -d
  ```
  
- 1. 삭제된 리모트 branch 로컬에서 지우기
+ 9. 삭제된 리모트 branch 로컬에서 지우기
  ```
  삭제될 remote branch 미리보기 : `git remote prune origin --dry-run`
  삭제된 remote branch local 에서 삭제 : `git remote prune origin`
  remote 가 삭제된 local branch 삭제 : `git branch -vv | grep ': gone]' | awk '{print $1}' | xargs git branch -d`
  ```
  
- 1. 원격 저장소 url 변경하기
+ 10. 원격 저장소 url 변경하기
  http://minsone.github.io/git/github-managing-remotes-changing-a-remotes-url
  
  1. git hub pull request
