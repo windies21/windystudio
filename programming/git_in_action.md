@@ -17,6 +17,9 @@ Conflict 코드 수정 후 Git add .
  ```
  git branch develop --set-upstream-to origin/develop
  ``` 
+ 
+ 1. 이미 remote repository 에 push 해버린 commit들 하나로 합치기
+ https://json.postype.com/post/209499
 
  7. Git Flow in Terminal
  ```
