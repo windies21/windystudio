@@ -39,6 +39,9 @@ https://pyformat.info/#named_placeholders
  1. python 으로 json 빨리 처리하기
 https://rein.kr/blog/archives/3670
 
+ 1. python 타입 힌트
+ https://artoria.us/35
+
 -----
 
 # 파이썬 튜닝
