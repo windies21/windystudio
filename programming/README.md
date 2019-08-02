@@ -1,4 +1,4 @@
-ç
+| [home](http://windystudio.net/) | [programming](http://windystudio.net/programming/) |
 
 # programming
  * [Python in Action](python_in_action.md)
