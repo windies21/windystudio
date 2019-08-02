@@ -36,3 +36,29 @@ bind M \
 $ tmux source-file ~/.tmux.conf
 
 ![locale](upload_10_10_2016_at_2_27_06_PM.png)
+
+----------
+
+* 마우스 선택 영역 자동 copy (출처: https://unix.stackexchange.com/questions/318281/how-to-copy-and-paste-with-a-mouse-with-tmux)
+
+.tmux.conf 에 다음 내용을 추가합니다.
+```
+# macOS only
+set -g mouse on
+bind -n WheelUpPane if-shell -F -t = "#{mouse_any_flag}" "send-keys -M" "if -Ft= '#{pane_in_mode}' 'send-keys -M' 'select-pane -t=; copy-mode -e; send-keys -M'"
+bind -n WheelDownPane select-pane -t= \; send-keys -M
+bind -n C-WheelUpPane select-pane -t= \; copy-mode -e \; send-keys -M
+bind -T copy-mode-vi    C-WheelUpPane   send-keys -X halfpage-up
+bind -T copy-mode-vi    C-WheelDownPane send-keys -X halfpage-down
+bind -T copy-mode-emacs C-WheelUpPane   send-keys -X halfpage-up
+bind -T copy-mode-emacs C-WheelDownPane send-keys -X halfpage-down
+
+# To copy, left click and drag to highlight text in yellow, 
+# once you release left click yellow text will disappear and will automatically be available in clibboard
+# # Use vim keybindings in copy mode
+setw -g mode-keys vi
+# Update default binding of `Enter` to also use copy-pipe
+unbind -T copy-mode-vi Enter
+bind-key -T copy-mode-vi Enter send-keys -X copy-pipe-and-cancel "pbcopy"
+bind-key -T copy-mode-vi MouseDragEnd1Pane send-keys -X copy-pipe-and-cancel "pbcopy"
+```
