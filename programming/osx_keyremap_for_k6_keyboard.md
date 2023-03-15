@@ -1,8 +1,8 @@
 키크론 K6 키보드에서 ESC 를 ~ 로 바꾸고 Caps lock 을 ESC 로 바꾸는 방법
 
-'''shell
+```shell
 $ hidutil property --set '{"UserKeyMapping":[{"HIDKeyboardModifierMappingSrc":0x700000039,"HIDKeyboardModifierMappingDst":0x700000029},{"HIDKeyboardModifierMappingSrc":0x700000029,"HIDKeyboardModifierMappingDst":0x700000035}]}'
-'''
+```
 
 hidutil 은 OSX 의 built-in util 입니다.
 
