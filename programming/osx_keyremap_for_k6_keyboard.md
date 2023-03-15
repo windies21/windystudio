@@ -6,5 +6,5 @@ $ hidutil property --set '{"UserKeyMapping":[{"HIDKeyboardModifierMappingSrc":0x
 
 hidutil 은 OSX 의 built-in util 입니다.
 
-다른 키들의 hex 값은 [https://developer.apple.com/library/archive/technotes/tn2450/_index.html#//apple_ref/doc/uid/DTS40017618-CH1-KEY_TABLE_USAGES](https://developer.apple.com/library/archive/technotes/tn2450/_index.html#//apple_ref/doc/uid/DTS40017618-CH1-KEY_TABLE_USAGES){:target="_blank"} 를 참고하시면 됩니다.
+다른 키들의 hex 값은 <a href="https://developer.apple.com/library/archive/technotes/tn2450/_index.html#//apple_ref/doc/uid/DTS40017618-CH1-KEY_TABLE_USAGES" target="_blank">https://developer.apple.com/library/archive/technotes/tn2450/_index.html#//apple_ref/doc/uid/DTS40017618-CH1-KEY_TABLE_USAGES</a> 를 참고하시면 됩니다.
 
