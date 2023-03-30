@@ -1,4 +1,4 @@
-| [home](http://windystudio.net/) |
+| [home](https://windystudio.com/) |
 
 # winDy
  * winDy = win of indie
