@@ -1,7 +1,9 @@
 Automatically prefix JIRA issue numbers to Git commit messages
 
 Edit.
+~~~
 $ vi .git/hooks/prepare-commit-msg
+~~~
 
 Copy and paste this code
 ~~~
