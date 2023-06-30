@@ -20,3 +20,6 @@ if [ -n "$issue_number" ]; then
     sed -i.bak -e "1s/^/[$issue_number] /" "$1"
 fi
 ~~~
+
+Make It Global
+see. https://coderwall.com/p/jp7d5q/create-a-global-git-commit-hook
