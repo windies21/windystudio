@@ -21,5 +21,4 @@ if [ -n "$issue_number" ]; then
 fi
 ~~~
 
-Make It Global
-see. https://coderwall.com/p/jp7d5q/create-a-global-git-commit-hook
+[Make It Global](https://coderwall.com/p/jp7d5q/create-a-global-git-commit-hook)
