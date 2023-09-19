@@ -110,5 +110,7 @@ autocmd BufReadPost *
 ~~~
 
 See. 
+
 [erics_vim_syntax_and_color_highlighting](https://github.com/sentientmachine/erics_vim_syntax_and_color_highlighting)
+
 [gruvbox](https://github.com/morhetz/gruvbox)
