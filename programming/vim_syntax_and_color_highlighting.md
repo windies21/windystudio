@@ -109,8 +109,11 @@ autocmd BufReadPost *
 "let &t_EI = "\<Esc>]50;CursorShape=0\x7" " Block in normal mode
 ~~~
 
-See. 
+Add this line to ~/.vim/colors/gruvbox.vim
+~~~
+let g:colors_name='gruvbox'
+set background=dark             <-- this line
+~~~
 
-[erics_vim_syntax_and_color_highlighting](https://github.com/sentientmachine/erics_vim_syntax_and_color_highlighting)
-
-[gruvbox](https://github.com/morhetz/gruvbox)
+See. [erics_vim_syntax_and_color_highlighting](https://github.com/sentientmachine/erics_vim_syntax_and_color_highlighting)
+See. [gruvbox](https://github.com/morhetz/gruvbox)
