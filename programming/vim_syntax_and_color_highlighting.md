@@ -8,7 +8,7 @@ $ cd .vim
 $ git clone https://github.com/sentientmachine/erics_vim_syntax_and_color_highlighting.git
 $ mv erics_vim_syntax_and_color_highlighting/* .
 $ rm -r erics_vim_syntax_and_color_highlighting 
-$ git clone git@github.com:morhetz/gruvbox.git
+$ git clone https://github.com/morhetz/gruvbox.git
 $ cp -R gruvbox/* .
 $ rm -r gruvbox
 $ cd
