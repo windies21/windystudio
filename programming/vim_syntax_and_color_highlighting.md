@@ -115,5 +115,9 @@ let g:colors_name='gruvbox'
 set background=dark             <-- this line
 ~~~
 
-See. [erics_vim_syntax_and_color_highlighting](https://github.com/sentientmachine/erics_vim_syntax_and_color_highlighting)
-See. [gruvbox](https://github.com/morhetz/gruvbox)
+
+See.
+
+[erics_vim_syntax_and_color_highlighting](https://github.com/sentientmachine/erics_vim_syntax_and_color_highlighting)
+
+[gruvbox](https://github.com/morhetz/gruvbox)
