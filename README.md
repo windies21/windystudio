@@ -23,5 +23,5 @@
  * coding tools
  * using computer
 
-# [Boardgame](Boardgame/README.md)
+# [Boardgame](boardgame/README.md)
  * Assemble the Army (TCG)
