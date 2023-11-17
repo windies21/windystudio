@@ -9,7 +9,7 @@
 
 ![Assemble the Army](/boardgame/assemble_the_army.png)
 
-### [게임룰](/boardgame/assemble_the_army_rule.md)
+### [게임룰](/boardgame/assemble_the_army_rule/)
 
 #### [연락하기](mailto:info@windystudio.com)
 * 데모판 카드 이미지 요청
