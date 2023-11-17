@@ -9,7 +9,7 @@
 
 ![Assemble the Army](/boardgame/assemble_the_army.png)
 
-[정보요청](mailto:info@windystudio.com)
+[연락하기](mailto:info@windystudio.com)
 * 데모판 카드 이미지 요청
 * 제휴 제안
 * 플레이 후기 전달
