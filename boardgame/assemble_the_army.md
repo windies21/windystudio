@@ -7,7 +7,7 @@
 
 “Assemble the Army” is a demo game for developing TCG play rules. The current demo deck is more like a strategy card game. Once the rules are confirmed, we are considering launching it as a standalone game or as a TCG game linked to NFT. Unlike existing TCGs or strategic card games, it includes a summoning strategy using resource card, which naturally leads to a variety of situations. While pursuing diversity in strategy, we tried to keep the rules for rounds and turns simple so as not to complicate the play rules. The first deck borrowed familiar themes from medieval and fantasy to define the card properties. The true protagonist of “Assemble the Army” lies in the ‘play rules’ themselves, which lead to various strategic situations.
 
-![](https://windystudio.com/boardgame/assemble_the_army.png | width=400)
+![Assemble the Army](/boardgame/assemble_the_army.png)
 
 [정보요청](mailto:info@windystudio.com)
 * 데모판 카드 이미지 요청
