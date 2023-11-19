@@ -9,7 +9,7 @@
 
 ![Assemble the Army](/boardgame/assemble_the_army.png)
 
-### [게임룰](/boardgame/assemble_the_army/rule/)
+### [게임룰북](/boardgame/assemble_the_army/rule/)
 
 ### [게임소개](/boardgame/assemble_the_army/ppt/)
 
