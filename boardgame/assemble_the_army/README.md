@@ -11,6 +11,8 @@
 
 ### [게임룰](/boardgame/assemble_the_army/rule/)
 
+### [게임소개](/boardgame/assemble_the_army/ppt/)
+
 #### [연락하기](mailto:info@windystudio.com)
 * 데모판 카드 이미지 요청
 * 제휴 제안
