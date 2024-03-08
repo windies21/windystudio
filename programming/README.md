@@ -14,4 +14,5 @@
  * [키크론 K6 키보드에서 ESC 를 ~ 로 바꾸고 Caps lock 을 ESC 로 바꾸는 방법](osx_keyremap_for_k6_keyboard.md)
  * [Automatically prefix JIRA issue numbers to Git commit messages](auto_jira_prefix_in_git_commit.md)
  * [Vim syntax and color highlighting](vim_syntax_and_color_highlighting.md)
+ * [osx zsh 커서 이동 키바인딩 바꾸기](cursor_in_osz_iterm2_zsh.md)
  
