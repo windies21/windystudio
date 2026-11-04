@@ -5,7 +5,7 @@ layout: minima-default
 <div class="home">
   {%- assign page_heading = page.heading | default: page.title -%}
   {%- if page_heading -%}
-    <h1 class="page-heading">{{ page_heading | escape }}</h1>
+    <h1 class="page-heading visually-hidden">{{ page_heading | escape }}</h1>
   {%- endif -%}
 
   {{ content }}

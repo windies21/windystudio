@@ -72,6 +72,19 @@
 - [x] 공식 소스·라이선스 준비, 인수 기준 및 Jekyll 로컬 빌드 준비. 원본 Sass 4개 파일은 지정 커밋과 바이트 단위 일치. Gemfile/lock과 로컬 플러그인 설정 추가.
 - [x] Claude Minima 기반 구현 및 기존 장식 제거. 실제 home/default 레이아웃 체인과 원본 Sass import 적용. 커스텀 스타일은 101줄로 정리하고 기존 697줄 CSS 제거. 불필요한 JS 없음.
 - [x] Codex 실제 Jekyll 빌드·인수·반응형·링크 검증. Jekyll 3.10 빌드 성공, 인수 검사 14개와 diff 공백 검사 통과. 320/390/600/768/1024/1280px에서 가로 넘침 없음, 이미지 정상, 본문 15px/섹션 제목 22px 확인. Tab 포커스·본문 건너뛰기·Explore Mailrise 이동 확인. 실제 iOS Safari/VoiceOver는 미검증.
-- [ ] master 게시·공개 빌드 및 화면 확인.
+- [x] master 게시·공개 빌드 및 화면 확인. 후속 요청 작업 시작 시 f40e25f Pages built 및 공개 HTML의 Minima 레이아웃/테마 표기 확인, 사용자가 제공한 실제 화면과 일치.
 
 - 빌드 준비 중 로컬 GitHub metadata 플러그인 누락을 보완했고, 네트워크 제한 때문에 발생한 공개 저장소 메타데이터 조회 실패는 승인된 네트워크 빌드로 해소했다. 구현 중간 상태의 include 미생성 실패 이후 완성본 빌드와 인수 검사가 정상 통과했다. 기존 Mailrise 파일·하위 페이지 소스·공용 Cayman 설정은 변경하지 않았다.
+
+- 게시 상태: 제품 커밋 `f40e25f0869912a510a56fecb5c38e7f1707a3d0`를 master에 push 완료. GitHub Actions run `41862974882`의 build 작업은 5분 이상 `queued`, `runner_name: null`, 실행 단계 없음 상태. Pages API는 `building`, 오류 메시지 없음. 공개 메인은 아직 이전 버전이므로 공개 배포 확인 항목은 미완료로 유지한다.
+- 재개 지점: https://github.com/windies21/windystudio/actions/runs/41862974882 완료 확인 → 공개 메인 HTML/CSS의 Minima 적용과 브라우저 화면 확인 → 게시 항목 완료 처리. 반복 push나 재실행으로 기존 배포 대기를 취소하지 않는다. 검증한 로컬 화면은 별도 스크린샷으로 제공.
+
+## 2026-11-05 영문 소개와 Mailrise 강조 후속 수정
+- 이전 Minima 커밋 f40e25f의 Pages 상태가 built로 전환된 것을 확인. 이번 요청은 상단 소개·푸터 영문화, Mailrise 영역을 winDy 위로 이동, 간결한 박스로 강조하고 아이콘과 제목에도 /mailrise/ 링크 추가. 이전 Boardgame 다음 순서 요구는 이번 요청으로 대체한다.
+- 확정 문구: “windystudio™ is a development group researching and building a range of applications powered by on-device AI.” 푸터는 “On-device AI application research and development” 및 “Built with Jekyll and the Minima theme.” 사용. 기존 winDy·밴드 등 소개 문구는 보존.
+- 범위: index.html, assets/home.scss, _includes/minima/footer.html. Minima와 작은 글꼴 유지, 연한 파랑 배경·파란 테두리의 단정한 박스. 아이콘+제목을 하나의 의미 있는 링크로 묶어 키보드 접근 지원.
+- Codex: 기존 순서 인수 기준을 새 요청으로 변경하고 영문 소개/푸터, 아이콘·제목 링크 계약 추가. Claude: 제품 파일 3개만 변경. 원본 Sass·기존 하위 페이지·인수 검사 변경 금지.
+- [x] 인수 검사 갱신 및 초기 실패 확인. 새 동작에 해당하는 영문화·순서·제목/아이콘 링크 3개 검사 실패, 기존 6개 검사 통과.
+- [x] Claude 구현, Jekyll 빌드·인수 검사 및 화면/링크 확인. 두 차례 위임 정상 종료·권한 거절 없음. Jekyll 빌드 성공, 인수 검사 총 16개와 diff 공백 검사 통과. 320/390/768/1280px 가로 넘침 없음, 파란 테두리/연한 배경과 Mailrise→winDy 순서 확인. 아이콘 클릭 및 제목 링크 Enter로 /mailrise/ 이동 확인. 본문 h1은 1px/clip으로 화면에서 숨기고 접근성 트리에 유지. 실제 VoiceOver 검증은 하지 않음.
+- [ ] master 게시와 실제 공개 페이지 반영 확인.
+- 추가 요청: 헤더와 중복되는 로고 위 본문 windystudio 제목 제거. 접근성용 h1은 화면에서 숨기고 헤더 브랜드·로고는 유지한다. _layouts/minima-home.html과 기존 home.scss의 최소 변경으로 처리하고 브라우저에서 제목이 시각적으로 사라졌는지 확인한다.

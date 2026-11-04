@@ -15,19 +15,29 @@ class HomeDocument(HTMLParser):
         super().__init__()
         self.nodes, self.text, self.headings = [], [], []
         self.heading = None
+        self.links, self.active_link = [], None
         self.feed(source)
 
     def handle_starttag(self, tag, attrs):
         self.nodes.append((tag, dict(attrs)))
+        if tag == 'a':
+            self.active_link = {'attrs': dict(attrs), 'text': '', 'images': []}
+            self.links.append(self.active_link)
+        if tag == 'img' and self.active_link is not None:
+            self.active_link['images'].append(dict(attrs))
         if re.fullmatch(r'h[1-6]', tag):
             self.heading = ''
 
     def handle_data(self, data):
         self.text.append(data)
+        if self.active_link is not None:
+            self.active_link['text'] += data
         if self.heading is not None:
             self.heading += data
 
     def handle_endtag(self, tag):
+        if tag == 'a':
+            self.active_link = None
         if re.fullmatch(r'h[1-6]', tag) and self.heading is not None:
             self.headings.append(self.heading.strip())
             self.heading = None
@@ -65,11 +75,30 @@ class HomePageAcceptance(unittest.TestCase):
             with self.subTest(phrase=phrase):
                 self.assertIn(phrase, self.words)
 
-    def test_mailrise_is_after_boardgame(self):
+    def test_mailrise_is_before_windy(self):
         headings = self.doc.headings
-        self.assertIn('Boardgame', headings)
+        self.assertIn('winDy', headings)
         self.assertIn('Mailrise', headings)
-        self.assertGreater(headings.index('Mailrise'), headings.index('Boardgame'))
+        self.assertLess(headings.index('Mailrise'), headings.index('winDy'))
+
+    def test_intro_and_footer_are_english(self):
+        self.assertIn('windystudio™ is a development group researching and building a range of applications powered by on-device AI.', self.words)
+        footer = re.search(r'<footer\b[^>]*>(.*?)</footer>', self.source, re.S)
+        self.assertIsNotNone(footer)
+        words = ' '.join(' '.join(HomeDocument(footer.group(1)).text).split())
+        self.assertIn('On-device AI application research and development', words)
+        self.assertIn('Built with Jekyll and the Minima theme.', words)
+        self.assertNotRegex(words, r'[가-힣]')
+
+    def test_mailrise_title_and_icon_are_links(self):
+        section = re.search(r'<section\b[^>]*id="mailrise"[^>]*>(.*?)</section>', self.source, re.S)
+        self.assertIsNotNone(section)
+        links = HomeDocument(section.group(1)).links
+        self.assertTrue(any(link['text'].strip() == 'Mailrise'
+                            and link['attrs'].get('href') == '/mailrise/' for link in links))
+        self.assertTrue(any(link['attrs'].get('href') == '/mailrise/'
+                            and any(img.get('src') == '/mailrise/assets/app-icon.png'
+                                    for img in link['images']) for link in links))
 
     def test_existing_destinations_are_preserved(self):
         links = [urlsplit(a['href']).path for t, a in self.doc.nodes if t == 'a' and 'href' in a]
