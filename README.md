@@ -1,5 +1,9 @@
 | [home](https://windystudio.com/) |
 
+# [Mailrise](/mailrise/)
+ * A clearer inbox. A lighter day.
+ * Important Gmail messages, dates, and on-device AI summaries for iPhone and iPad.
+
 # winDy
  * winDy = win of indie
  * 아이작 아시모프처럼 명쾌하게 생각하기

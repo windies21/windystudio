@@ -31,3 +31,12 @@
 - 공개 배포 완료: 제품 커밋 `0b5e71e4ca4ad675263435dbe867a51c0839ed42`를 master에 반영. GitHub Pages build 상태 `built`, 오류 없음. `https://windystudio.com/mailrise`에서 `/mailrise/`로 이동 후 HTTP 200이며, 배포 HTML의 SHA-256이 로컬 최종본과 일치함을 확인.
 - CSS와 브랜드 PNG 2개도 공개 URL에서 성공적으로 내려받아 SHA-256이 로컬 파일과 각각 일치함을 확인했다.
 - 남은 필수 작업 없음. 추후 실제 App Store/TestFlight 링크가 확정되면 다운로드 CTA를 연결할 수 있다.
+
+## 2026-11-05 메인 링크와 브랜드 표기
+- 요청: 메인 페이지에 Mailrise 소개 링크 추가. 소개 페이지의 `Windy Studio`를 소문자 고유 브랜드명 `windystudio™`로 통일하고 TM 사용법 검토.
+- 최신 origin/master와 작업 브랜치 일치, 미커밋 변경 없음 확인.
+- 범위: README.md에 Mailrise 링크와 짧은 설명, mailrise/index.html의 본문·버튼·푸터·Open Graph 브랜드 표기 4곳 수정. CSS·기능·URL은 유지.
+- 단순 문구 및 Markdown 문서 변경이므로 직접 수정 예외 적용. 새 테스트를 추가하지 않고 기존 7개 인수 검사, 실제 diff, 배포된 메인의 링크 이동과 소개 페이지 표기 확인.
+- TM 검토 근거: [USPTO](https://www.uspto.gov/trademarks/basics/what-trademark), [INTA](https://www.inta.org/fact-sheets/trademark-symbols/). TM은 브랜드를 상표로 사용한다는 표시이며 등록 사실·독점권을 보장하지 않는다. 등록 여부를 확인하지 않았으므로 등록상표 기호 ®는 사용하지 않는다. 국가별 권리와 선행상표 충돌 여부 조사는 이번 검토에 포함하지 않는다.
+- [x] 링크·브랜드 문구 수정과 기존 인수 검사. 7개 검사와 `git diff --check` 통과. 기존 페이지 테스트·CSS 변경 없음.
+- [ ] master 반영 및 공개 페이지 확인.
