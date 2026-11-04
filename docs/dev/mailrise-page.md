@@ -47,3 +47,17 @@
 - Cayman 기본 레이아웃의 헤더/푸터 변수와 jekyll/github-metadata의 사용자 설정 병합 동작을 공식 소스에서 확인했다. 템플릿 복제나 스크립트 없이 설정·문서의 단순 수정으로 처리한다.
 - [x] 로컬 변경·문서 순서 및 설정 검증. Ruby YAML 파싱과 title/푸터 표시값, Python으로 Mailrise 링크 단일 존재·Boardgame 이후 순서 확인, `git diff --check` 통과.
 - [x] GitHub Pages 반영 후 실제 메인 제목·푸터·링크 순서 확인. 제품 커밋 `c98d278a0c514d90a9181b3b7001c8b2d9863c1e` 빌드 `built`. 공개 HTML과 브라우저 새로고침으로 제목·헤더·푸터 `windystudio™`, 마지막 두 섹션 Boardgame → Mailrise 및 기존 링크 목적지 유지 확인. 남은 작업 없음.
+
+## 2026-11-05 로고 기반 메인 리디자인
+- 요청: 첨부 windystudio.png를 사용해 메인 디자인 개편. 주색 #6699ff, 로고의 연한 파랑 보조색, 기존 녹색 포인트. Mailrise와 일관된 품질을 가지되 다른 테마로 구분.
+- 상단은 자유롭게 재구성하고 View on GitHub 제거. windystudio™를 온디바이스 AI 기반의 다양한 애플리케이션을 연구·개발하는 개발그룹으로 소개한다.
+- 기존 winDy/21st Century Radio Band/programming/Boardgame/Mailrise의 이름·소개 문구·링크는 모두 보존하고 이전보다 작은 본문과 제목으로 표시. Mailrise는 Boardgame 다음 순서를 유지하되 별도 강조 박스를 사용.
+- 구현: 독립 정적 루트 index.html + assets/home.css. 첨부 원본은 assets/images/windystudio.png에 수정 없이 복사. 기존 README는 콘텐츠 기준으로 보존하며 Mailrise 페이지와 기타 하위 페이지·기존 Jekyll 설정은 변경하지 않는다.
+- Codex 인수: tests/test_home_page.py. 기존 문구 보존, 링크 목적지·순서, 의미 있는 문서/브랜드 소개, 원본 로고, GitHub CTA 제거, 메타/자산 경로 확인. Claude 수정 금지. 정적 콘텐츠이므로 불필요한 JS·모듈 테스트는 만들지 않는다.
+- 브라우저: 데스크톱/모바일 가독성과 레이아웃, 색상/위계, 링크 이동. #6699ff 위에는 짙은 글자로 대비 확보. 기본 본문 14~16px 수준, 메뉴 제목 약 18~24px, Mailrise는 별도 강조. 외부 라이브러리·폰트 없이 구현.
+- [x] 최신 master와 깨끗한 작업 트리 확인, 첨부 로고 준비.
+- [x] Codex 인수 검사 작성·미구현 실패 확인. 새 홈 검사 6개를 작성했고 index.html 미존재로 초기 실패 확인. 첨부 원본과 복사 로고의 SHA-256 일치.
+- [x] Claude 디자인 구현, Codex 내용/브라우저 검증 및 필요한 보완. index.html과 assets/home.css 구현, 기존 Mailrise/README/설정 변경 없음. CLI 정상 종료 및 권한 거절 없음.
+- 검증: 인수 검사 총 13개 통과(홈 6 + 기존 Mailrise 7), `git diff --check` 통과. 320/390/640/768/960/961/1024/1440px에서 문서 폭=뷰포트 폭, 이미지 정상 로드, 로고 패널과 텍스트 32~64px 여유 확인. 계산된 주색 rgb(102,153,255), 본문 15px, 메뉴 제목 18~22px 확인.
+- 브라우저: Tab 포커스와 본문 건너뛰기, 상단 Mailrise 앵커 및 Explore Mailrise → 기존 소개 페이지 이동 확인. 320px 영문 표제의 과도한 분리를 CSS 몇 줄로 직접 보완 후 재확인. 기존 programming/boardgame/LIVE 공개 URL HTTP 200 확인. 실제 iOS Safari/VoiceOver는 별도 확인하지 않음.
+- [ ] GitHub Pages 배포·공개 결과 확인.
