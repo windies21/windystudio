@@ -60,4 +60,4 @@
 - [x] Claude 디자인 구현, Codex 내용/브라우저 검증 및 필요한 보완. index.html과 assets/home.css 구현, 기존 Mailrise/README/설정 변경 없음. CLI 정상 종료 및 권한 거절 없음.
 - 검증: 인수 검사 총 13개 통과(홈 6 + 기존 Mailrise 7), `git diff --check` 통과. 320/390/640/768/960/961/1024/1440px에서 문서 폭=뷰포트 폭, 이미지 정상 로드, 로고 패널과 텍스트 32~64px 여유 확인. 계산된 주색 rgb(102,153,255), 본문 15px, 메뉴 제목 18~22px 확인.
 - 브라우저: Tab 포커스와 본문 건너뛰기, 상단 Mailrise 앵커 및 Explore Mailrise → 기존 소개 페이지 이동 확인. 320px 영문 표제의 과도한 분리를 CSS 몇 줄로 직접 보완 후 재확인. 기존 programming/boardgame/LIVE 공개 URL HTTP 200 확인. 실제 iOS Safari/VoiceOver는 별도 확인하지 않음.
-- [ ] GitHub Pages 배포·공개 결과 확인.
+- [x] GitHub Pages 배포·공개 결과 확인. 제품 커밋 `bb792bd76a4aa6a8674906e330b3c0fbdf5d6534`의 Pages `built`, 오류 없음. 공개 루트가 새로운 독립 index.html을 제공함을 확인했고 HTML·CSS·로고 파일이 로컬 최종본과 바이트 단위로 일치한다. 공개 브라우저에서도 새 소개·기존 콘텐츠·Mailrise 카드 확인. 남은 필수 작업 없음.
