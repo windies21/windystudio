@@ -13,7 +13,7 @@
 - [x] Codex: 인수 테스트 작성. 기존 테스트 도구가 없어 Python 표준 unittest/HTMLParser 사용.
 - [x] Claude: 독립적인 정적 mailrise/index.html 및 CSS 작성. 모든 방문자 문구 영문, 모바일 대응, 의미 있는 내비게이션, 키보드 접근성, SEO 메타데이터.
 - [x] Codex: 내용·링크·자산 인수 검사, 데스크톱/모바일 브라우저 검증.
-- [ ] Codex: GitHub Pages master에 반영하고 실제 배포 및 /mailrise 응답 확인.
+- [x] Codex: GitHub Pages master에 반영하고 실제 배포 및 /mailrise 응답 확인.
 
 ## 검증 책임과 범위
 - Codex 소유: tests/test_mailrise_page.py. Claude는 수정·삭제·기대값 약화 금지.
@@ -27,4 +27,7 @@
 - 구현: 외부 폰트·라이브러리·JavaScript 없이 정적 HTML/CSS와 실제 앱 브랜드 PNG 2개 사용. 기존 Jekyll 테마가 감싸지 않도록 frontmatter 없는 독립 페이지로 작성.
 - 검토 후 보완: 예시 요약이 마지막 리포트 행을 가리던 문제를 일반 문서 흐름과 빈 패딩으로 해결. 답장 초안은 Reply/Reply All 진입 후 생성·검토·Send이며 Forward는 별도임을 교정. 실제 예시와 일치하는 요약으로 수정.
 - 로컬 HTTP 200, 인수 검사 7개 통과. 브라우저에서 320/390/561/768/1024/1440px의 문서 너비가 뷰포트와 일치하고 마지막 리포트 행과 요약 사이 35~45px 간격을 확인. 이미지 모두 정상 로드. CTA 앵커, FAQ 마우스 펼침·Enter 닫힘, Tab 포커스 및 Skip to content의 main 이동 확인.
-- 실제 iOS Safari/VoiceOver와 앱 자체 동작은 이번 웹페이지 검증 범위 밖. 다음 단계는 master 배포와 실제 URL 확인.
+- 실제 iOS Safari/VoiceOver와 앱 자체 동작은 이번 웹페이지 검증 범위 밖.
+- 공개 배포 완료: 제품 커밋 `0b5e71e4ca4ad675263435dbe867a51c0839ed42`를 master에 반영. GitHub Pages build 상태 `built`, 오류 없음. `https://windystudio.com/mailrise`에서 `/mailrise/`로 이동 후 HTTP 200이며, 배포 HTML의 SHA-256이 로컬 최종본과 일치함을 확인.
+- CSS와 브랜드 PNG 2개도 공개 URL에서 성공적으로 내려받아 SHA-256이 로컬 파일과 각각 일치함을 확인했다.
+- 남은 필수 작업 없음. 추후 실제 App Store/TestFlight 링크가 확정되면 다운로드 CTA를 연결할 수 있다.
