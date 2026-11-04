@@ -46,4 +46,4 @@
 - README.md의 기존 Mailrise 제목·설명을 그대로 마지막 섹션으로 이동. `_config.yml`의 title과 테마 푸터에 쓰이는 github.repository_name 표시값 설정. 실제 저장소명·링크·도메인은 유지한다. 공용 Cayman 테마를 사용하는 페이지의 사이트 브랜드도 같은 표기를 따른다.
 - Cayman 기본 레이아웃의 헤더/푸터 변수와 jekyll/github-metadata의 사용자 설정 병합 동작을 공식 소스에서 확인했다. 템플릿 복제나 스크립트 없이 설정·문서의 단순 수정으로 처리한다.
 - [x] 로컬 변경·문서 순서 및 설정 검증. Ruby YAML 파싱과 title/푸터 표시값, Python으로 Mailrise 링크 단일 존재·Boardgame 이후 순서 확인, `git diff --check` 통과.
-- [ ] GitHub Pages 반영 후 실제 메인 제목·푸터·링크 순서 확인.
+- [x] GitHub Pages 반영 후 실제 메인 제목·푸터·링크 순서 확인. 제품 커밋 `c98d278a0c514d90a9181b3b7001c8b2d9863c1e` 빌드 `built`. 공개 HTML과 브라우저 새로고침으로 제목·헤더·푸터 `windystudio™`, 마지막 두 섹션 Boardgame → Mailrise 및 기존 링크 목적지 유지 확인. 남은 작업 없음.
