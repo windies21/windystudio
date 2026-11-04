@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {%- include minima/head.html -%}
+
+  <body>
+
+    <a class="skip-link" href="#main">본문으로 건너뛰기</a>
+
+    {%- include minima/header.html -%}
+
+    <main class="page-content" id="main" tabindex="-1">
+      <div class="wrapper">
+        {{ content }}
+      </div>
+    </main>
+
+    {%- include minima/footer.html -%}
+
+  </body>
+
+</html>

@@ -1,0 +1,11 @@
+url: https://windystudio.com
+baseurl: ''
+repository: windies21/windystudio
+plugins:
+  - jekyll-relative-links
+  - jekyll-optional-front-matter
+  - jekyll-readme-index
+  - jekyll-default-layout
+  - jekyll-titles-from-headings
+  - jekyll-seo-tag
+  - jekyll-github-metadata

@@ -1,0 +1,101 @@
+---
+# Compiled by Jekyll to /assets/home.css. Layout and typography come from Minima.
+---
+
+// windystudio™ palette
+$studio-blue:       #6699ff; // primary brand tone, rules and focus only
+$studio-blue-pale:  #b5c9e8; // pale tone from the logo
+$studio-green-ink:  #0d7443; // accessible green for small labels
+
+// Minima variables (must precede the import)
+$base-font-size:   15px;
+$text-color:       #1b2233;
+$background-color: #ffffff;
+$brand-color:      #3366cc; // darker #6699ff for readable small links
+$grey-color:       #6a6a6a;
+
+@import "minima";
+
+/**
+ * Site header
+ */
+.site-header {
+  border-top: 3px solid $studio-blue;
+  border-bottom-color: $studio-blue-pale;
+}
+
+.home-nav {
+  float: right;
+  line-height: $base-line-height * $base-font-size * 2.25;
+
+  .page-link {
+    color: $text-color;
+
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+
+  @include media-query($on-palm) {
+    float: none;
+    clear: both;
+    line-height: $base-line-height;
+    padding-bottom: $spacing-unit / 3;
+  }
+}
+
+/**
+ * Home content
+ */
+.home-section h2 {
+  @include relative-font-size(1.4667);
+  margin-top: $spacing-unit;
+}
+
+.home-logo {
+  display: block;
+  width: 240px;
+  height: auto;
+  margin-bottom: $spacing-unit / 2;
+}
+
+.home-term {
+  color: $studio-green-ink;
+}
+
+.home-app-icon {
+  width: 56px;
+  height: 56px;
+  margin-right: 12px;
+  border-radius: 12px;
+}
+
+.home-app-tagline {
+  color: $grey-color-dark;
+}
+
+/**
+ * Accessibility
+ */
+.skip-link {
+  position: absolute;
+  left: $spacing-unit / 2;
+  top: -100px;
+  padding: 6px 12px;
+  background-color: $background-color;
+  z-index: 10;
+
+  &:focus {
+    top: 8px;
+  }
+}
+
+a:focus-visible,
+main:focus-visible {
+  outline: 2px solid $studio-blue;
+  outline-offset: 2px;
+}
+
+main:focus:not(:focus-visible) {
+  outline: none;
+}

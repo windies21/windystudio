@@ -1,11 +1,13 @@
 """Visitor-facing contracts for the redesigned studio home (stdlib only)."""
 import re
+import os
 import unittest
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import urlsplit, unquote
 
 ROOT = Path(__file__).resolve().parents[1]
+SITE_ROOT = Path(os.environ.get('SITE_ROOT', str(ROOT / '_site')))
 
 
 class HomeDocument(HTMLParser):
@@ -34,7 +36,7 @@ class HomeDocument(HTMLParser):
 class HomePageAcceptance(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.source = (ROOT / 'index.html').read_text()
+        cls.source = (SITE_ROOT / 'index.html').read_text()
         cls.doc = HomeDocument(cls.source)
         cls.words = ' '.join(' '.join(cls.doc.text).split())
 
@@ -103,7 +105,14 @@ class HomePageAcceptance(unittest.TestCase):
                 url = attrs.get('src', attrs.get('href', ''))
                 parts = urlsplit(url)
                 self.assertFalse(parts.scheme or parts.netloc, 'assets must be local')
-                self.assertTrue((ROOT / unquote(parts.path.lstrip('/'))).is_file(), url)
+                self.assertTrue((SITE_ROOT / unquote(parts.path.lstrip('/'))).is_file(), url)
+
+    def test_rendered_with_jekyll(self):
+        self.assertTrue(any(t == 'meta' and a.get('name') == 'generator'
+                            and a.get('content', '').startswith('Jekyll')
+                            for t, a in self.doc.nodes))
+        self.assertNotIn('{%', self.source)
+        self.assertNotIn('{{', self.source)
 
 
 if __name__ == '__main__':
