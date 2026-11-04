@@ -65,14 +65,21 @@ $grey-color:       #6a6a6a;
 
 .home-app {
   margin: $spacing-unit 0;
-  padding: 20px;
+  padding: 8px 16px;
+  line-height: 1.25;
+  letter-spacing: -0.015em;
   background-color: #f2f6ff;
   border: 1px solid $studio-blue;
   border-radius: 6px;
   overflow-wrap: break-word;
 
   h2 {
-    margin-top: 0;
+    margin: 0 0 4px;
+    line-height: 1.2;
+  }
+
+  p {
+    margin-bottom: 2px;
   }
 
   p:last-child {
@@ -81,7 +88,7 @@ $grey-color:       #6a6a6a;
 }
 
 .home-app-link {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   gap: 12px;
   max-width: 100%;
@@ -89,9 +96,9 @@ $grey-color:       #6a6a6a;
 
 .home-app-icon {
   flex-shrink: 0;
-  width: 56px;
-  height: 56px;
-  border-radius: 12px;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
 }
 
 .home-app-tagline {
