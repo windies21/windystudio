@@ -37,5 +37,5 @@
   <meta name="twitter:image" content="{{ page.image }}">
   {%- endif %}
 
-  <link rel="stylesheet" href="{{ "/assets/home.css" | relative_url }}">
+  <link rel="stylesheet" href="{{ "/assets/home.css" | relative_url }}?v={{ site.time | date: '%s' }}">
 </head>
