@@ -39,4 +39,4 @@
 - 단순 문구 및 Markdown 문서 변경이므로 직접 수정 예외 적용. 새 테스트를 추가하지 않고 기존 7개 인수 검사, 실제 diff, 배포된 메인의 링크 이동과 소개 페이지 표기 확인.
 - TM 검토 근거: [USPTO](https://www.uspto.gov/trademarks/basics/what-trademark), [INTA](https://www.inta.org/fact-sheets/trademark-symbols/). TM은 브랜드를 상표로 사용한다는 표시이며 등록 사실·독점권을 보장하지 않는다. 등록 여부를 확인하지 않았으므로 등록상표 기호 ®는 사용하지 않는다. 국가별 권리와 선행상표 충돌 여부 조사는 이번 검토에 포함하지 않는다.
 - [x] 링크·브랜드 문구 수정과 기존 인수 검사. 7개 검사와 `git diff --check` 통과. 기존 페이지 테스트·CSS 변경 없음.
-- [ ] master 반영 및 공개 페이지 확인.
+- [x] master 반영 및 공개 페이지 확인. 제품 커밋 `e20217365e5d37c29117d6c7c3607392f3f61e62`의 Pages `built` 확인. 공개 메인의 Mailrise 링크 클릭으로 소개 페이지 이동, 새로고침 후 본문·버튼·푸터의 windystudio™ 표시 확인. 공개 HTML에서 메인 링크와 브랜드 4곳을 검사하고 로컬 최종 HTML과 일치 확인. 남은 필수 작업 없음.
